@@ -225,7 +225,7 @@ export default function starlightOptimizer(options) {
 :::tip Why This Matters
 We've seen too many documentation sites break after Starlight updates because they overrode components. Our script injection approach means you can update Starlight confidently without fear of breaking your site.
 
-Read more: [Why We Avoid Component Overrides](/implementation/no-overrides)
+Read more: [Why We Avoid Component Overrides](/astro-starlight-docs-template/implementation/no-overrides)
 :::
 
 ### 4. LLM Optimization (AI Discoverability)
@@ -600,7 +600,7 @@ Instead of spending 2+ weeks building and testing these features yourself, spend
 ---
 
 **Next Steps:**
-- [Explore all features included](/features/overview)
-- [Learn about the technical implementation](/implementation/technical)
-- [Get started with configuration](/guides/configuration)
-- [Understand why we avoid component overrides](/implementation/no-overrides)
+- [Explore all features included](/astro-starlight-docs-template/features/overview)
+- [Learn about the technical implementation](/astro-starlight-docs-template/implementation/technical)
+- [Get started with configuration](/astro-starlight-docs-template/guides/configuration)
+- [Understand why we avoid component overrides](/astro-starlight-docs-template/implementation/no-overrides)

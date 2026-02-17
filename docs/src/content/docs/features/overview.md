@@ -34,7 +34,7 @@ Complete Google Analytics 4 implementation with privacy-first design:
   - Cookie-less tracking option
   - Data retention controls
 
-[Learn more about Analytics →](/features/analytics)
+[Learn more about Analytics →](/astro-starlight-docs-template/features/analytics)
 
 ### GDPR Compliance
 
@@ -61,7 +61,7 @@ Automatic compliance with EU data protection regulations:
   - Cookie Law compliance
   - Data processor agreements
 
-[Learn more about GDPR Compliance →](/features/gdpr)
+[Learn more about GDPR Compliance →](/astro-starlight-docs-template/features/gdpr)
 
 ### SEO Optimization
 
@@ -88,7 +88,7 @@ Advanced search engine optimization beyond Starlight's basics:
   - LinkedIn preview cards
   - WhatsApp sharing support
 
-[Learn more about SEO Features →](/features/seo)
+[Learn more about SEO Features →](/astro-starlight-docs-template/features/seo)
 
 ### LLM Optimization
 
@@ -115,7 +115,7 @@ Make your documentation discoverable by AI assistants:
   - Context preservation
   - Citation support
 
-[Learn more about LLM Optimization →](/features/llm)
+[Learn more about LLM Optimization →](/astro-starlight-docs-template/features/llm)
 
 ## Implementation Features
 
@@ -143,7 +143,7 @@ Clean, maintainable integration without component overrides:
   - No render-blocking scripts
   - Critical CSS inlined
 
-[Learn more about Technical Implementation →](/implementation/technical)
+[Learn more about Technical Implementation →](/astro-starlight-docs-template/implementation/technical)
 
 ### Regional Intelligence
 
@@ -173,7 +173,7 @@ Smart regional detection and adaptation:
   - Respects user's explicit choice
   - Persists preference across sessions
 
-[Learn more about Enhancements →](/implementation/enhancements)
+[Learn more about Enhancements →](/astro-starlight-docs-template/implementation/enhancements)
 
 ### No Layout Breaking
 
@@ -200,7 +200,7 @@ Guaranteed compatibility with Starlight updates:
   - Mobile responsiveness maintained
   - Print styles preserved
 
-[Learn more about No Overrides Approach →](/implementation/no-overrides)
+[Learn more about No Overrides Approach →](/astro-starlight-docs-template/implementation/no-overrides)
 
 ## Configuration Features
 
@@ -291,7 +291,7 @@ interface StarlightOptimizerOptions {
 }
 ```
 
-[Learn more about Configuration →](/guides/configuration)
+[Learn more about Configuration →](/astro-starlight-docs-template/guides/configuration)
 
 ## Feature Matrix
 
@@ -488,10 +488,10 @@ CSP-safe script injection:
 
 ### Documentation
 
-- 📚 [Configuration Guide](/guides/configuration)
-- 🎨 [Customization Guide](/guides/customization)
-- 🐛 [Troubleshooting](/guides/troubleshooting)
-- 🔧 [Technical Implementation](/implementation/technical)
+- 📚 [Configuration Guide](/astro-starlight-docs-template/guides/configuration)
+- 🎨 [Customization Guide](/astro-starlight-docs-template/guides/customization)
+- 🐛 [Troubleshooting](/astro-starlight-docs-template/guides/troubleshooting)
+- 🔧 [Technical Implementation](/astro-starlight-docs-template/implementation/technical)
 
 ### Community
 
@@ -509,6 +509,6 @@ CSP-safe script injection:
 ---
 
 **Next Steps:**
-- [Configure analytics and GDPR compliance](/guides/configuration)
-- [Learn about customization options](/guides/customization)
-- [Explore technical implementation details](/implementation/technical)
+- [Configure analytics and GDPR compliance](/astro-starlight-docs-template/guides/configuration)
+- [Learn about customization options](/astro-starlight-docs-template/guides/customization)
+- [Explore technical implementation details](/astro-starlight-docs-template/implementation/technical)

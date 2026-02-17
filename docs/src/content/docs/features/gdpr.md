@@ -715,6 +715,6 @@ try {
 ---
 
 **Next Steps:**
-- [Explore SEO features](/features/seo)
-- [Learn about LLM optimization](/features/llm)
-- [Configure consent banner text](/guides/configuration)
+- [Explore SEO features](/astro-starlight-docs-template/features/seo)
+- [Learn about LLM optimization](/astro-starlight-docs-template/features/llm)
+- [Configure consent banner text](/astro-starlight-docs-template/guides/configuration)

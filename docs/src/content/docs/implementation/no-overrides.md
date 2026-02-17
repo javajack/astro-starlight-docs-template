@@ -593,6 +593,6 @@ This is why our optimizer uses script injection exclusively.
 ---
 
 **Next Steps:**
-- [See complete configuration options](/guides/configuration)
-- [Learn about customization](/guides/customization)
-- [Review technical implementation](/implementation/technical)
+- [See complete configuration options](/astro-starlight-docs-template/guides/configuration)
+- [Learn about customization](/astro-starlight-docs-template/guides/customization)
+- [Review technical implementation](/astro-starlight-docs-template/implementation/technical)

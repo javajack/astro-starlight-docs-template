@@ -549,6 +549,6 @@ if (oldConsent) {
 ---
 
 **Next Steps:**
-- [Understand why we avoid component overrides](/implementation/no-overrides)
-- [Learn about configuration options](/guides/configuration)
-- [Explore troubleshooting tips](/guides/troubleshooting)
+- [Understand why we avoid component overrides](/astro-starlight-docs-template/implementation/no-overrides)
+- [Learn about configuration options](/astro-starlight-docs-template/guides/configuration)
+- [Explore troubleshooting tips](/astro-starlight-docs-template/guides/troubleshooting)

@@ -572,11 +572,11 @@ Astro represents a paradigm shift for content-focused websites:
 - **DX**: Modern tooling with zero configuration
 - **Flexibility**: Use any framework, or none at all
 
-For documentation sites specifically, Astro is the ideal foundation. When combined with [Starlight](/why/starlight-advantages), you get a documentation platform that's faster, cheaper, and easier to maintain than any alternative.
+For documentation sites specifically, Astro is the ideal foundation. When combined with [Starlight](/astro-starlight-docs-template/why/starlight-advantages), you get a documentation platform that's faster, cheaper, and easier to maintain than any alternative.
 
 ---
 
 **Next Steps:**
-- [Learn about Starlight's documentation-specific features](/why/starlight-advantages)
-- [Understand why the optimizer package is needed](/why/why-optimizer)
-- [Explore the features included](/features/overview)
+- [Learn about Starlight's documentation-specific features](/astro-starlight-docs-template/why/starlight-advantages)
+- [Understand why the optimizer package is needed](/astro-starlight-docs-template/why/why-optimizer)
+- [Explore the features included](/astro-starlight-docs-template/features/overview)

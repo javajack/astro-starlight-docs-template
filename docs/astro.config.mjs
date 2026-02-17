@@ -10,9 +10,93 @@ export default defineConfig({
 		starlight({
 			title: 'Astro Starlight Docs Template',
 			description: 'Production-ready documentation with Google Analytics, GDPR compliance, SEO, and LLM optimization',
+			components: {
+				Footer: './src/components/Footer.astro',
+			},
+			head: [
+				// Google Consent Mode v2 - MUST load BEFORE gtag.js (synchronous)
+				{
+					tag: 'script',
+					content: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+
+						function isGDPRRegion() {
+							const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+							const euTimezones = ['Europe/', 'Atlantic/Reykjavik', 'Atlantic/Azores', 'Atlantic/Madeira'];
+							return euTimezones.some(zone => tz.startsWith(zone));
+						}
+
+						const isGDPR = isGDPRRegion();
+
+						gtag('consent', 'default', {
+							'ad_storage': 'denied',
+							'ad_user_data': 'denied',
+							'ad_personalization': 'denied',
+							'analytics_storage': isGDPR ? 'denied' : 'granted',
+							'functionality_storage': 'granted',
+							'personalization_storage': 'denied',
+							'security_storage': 'granted',
+							'wait_for_update': 500,
+						});
+
+						window.__isGDPRRegion = isGDPR;
+					`,
+				},
+				// Google Analytics - Load gtag.js (async, after consent default)
+				// TODO: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID
+				{
+					tag: 'script',
+					attrs: { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX' },
+				},
+				{
+					tag: 'script',
+					content: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-XXXXXXXXXX', {
+							'anonymize_ip': true,
+							'cookie_flags': 'SameSite=None;Secure'
+						});
+					`,
+				},
+				// SEO meta tags
+				{
+					tag: 'meta',
+					attrs: {
+						name: 'keywords',
+						content: 'astro, starlight, documentation, template, google analytics, gdpr, seo, llm optimization',
+					},
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						name: 'author',
+						content: 'Rakesh Waghela',
+					},
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						name: 'twitter:card',
+						content: 'summary_large_image',
+					},
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						name: 'twitter:site',
+						content: '@webiyo',
+					},
+				},
+				// Cookie Consent Banner
+				{ tag: 'script', attrs: { defer: true, src: '/astro-starlight-docs-template/cookie-consent.js' } },
+			],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/javajack/astro-starlight-docs-template' },
 				{ icon: 'x.com', label: 'X', href: 'https://x.com/webiyo' },
+				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/rakeshwaghela' },
 			],
 			sidebar: [
 				{

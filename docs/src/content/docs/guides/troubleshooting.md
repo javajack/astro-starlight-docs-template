@@ -753,6 +753,6 @@ If you can't resolve your issue:
 ---
 
 **Related Pages:**
-- [Configuration Guide](/guides/configuration)
-- [Customization Guide](/guides/customization)
-- [Technical Implementation](/implementation/technical)
+- [Configuration Guide](/astro-starlight-docs-template/guides/configuration)
+- [Customization Guide](/astro-starlight-docs-template/guides/customization)
+- [Technical Implementation](/astro-starlight-docs-template/implementation/technical)

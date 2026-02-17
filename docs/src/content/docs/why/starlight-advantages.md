@@ -570,7 +570,7 @@ import type { Props } from '@astrojs/starlight/props';
 ```
 
 :::caution Component Override Warning
-Our optimizer package [avoids component overrides](/implementation/no-overrides) because they can break easily with Starlight updates. Prefer CSS customization and script injection when possible.
+Our optimizer package [avoids component overrides](/astro-starlight-docs-template/implementation/no-overrides) because they can break easily with Starlight updates. Prefer CSS customization and script injection when possible.
 :::
 
 ## Sidebar Navigation
@@ -838,11 +838,11 @@ Starlight provides everything you need for world-class documentation:
 ✅ **Customizable**: Extensive theming options
 ✅ **Fast**: 100/100 Lighthouse scores
 
-When combined with [Astro's performance benefits](/why/astro-benefits) and [our optimizer package](/why/why-optimizer), you get the ultimate documentation platform.
+When combined with [Astro's performance benefits](/astro-starlight-docs-template/why/astro-benefits) and [our optimizer package](/astro-starlight-docs-template/why/why-optimizer), you get the ultimate documentation platform.
 
 ---
 
 **Next Steps:**
-- [Learn why the optimizer package is needed](/why/why-optimizer)
-- [Explore analytics and GDPR features](/features/overview)
-- [Get started with configuration](/guides/configuration)
+- [Learn why the optimizer package is needed](/astro-starlight-docs-template/why/why-optimizer)
+- [Explore analytics and GDPR features](/astro-starlight-docs-template/features/overview)
+- [Get started with configuration](/astro-starlight-docs-template/guides/configuration)

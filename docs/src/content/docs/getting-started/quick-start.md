@@ -128,12 +128,12 @@ If you're in a GDPR region (or using a VPN), you should see the cookie consent b
 
 Want to customize the setup? Check out:
 
-- [Configuration Guide](/guides/configuration/) - Customize colors, text, behavior
-- [Customization Guide](/guides/customization/) - Advanced customization options
+- [Configuration Guide](/astro-starlight-docs-template/guides/configuration/) - Customize colors, text, behavior
+- [Customization Guide](/astro-starlight-docs-template/guides/customization/) - Advanced customization options
 
 ## Troubleshooting
 
-- **Banner not showing?** Check if you're in a GDPR region or see [Troubleshooting](/guides/troubleshooting/)
+- **Banner not showing?** Check if you're in a GDPR region or see [Troubleshooting](/astro-starlight-docs-template/guides/troubleshooting/)
 - **Analytics not working?** Verify your GA ID in `astro.config.mjs`
 - **Footer not appearing?** Make sure you selected "Yes" for custom footer
 
@@ -141,6 +141,6 @@ Want to customize the setup? Check out:
 
 Now that your documentation is optimized, learn more about:
 
-- [Why Astro & Starlight?](/why/astro-benefits/) - Understanding your tech stack
-- [Features Overview](/features/overview/) - Deep dive into what you just installed
-- [Implementation Details](/implementation/technical/) - How it all works under the hood
+- [Why Astro & Starlight?](/astro-starlight-docs-template/why/astro-benefits/) - Understanding your tech stack
+- [Features Overview](/astro-starlight-docs-template/features/overview/) - Deep dive into what you just installed
+- [Implementation Details](/astro-starlight-docs-template/implementation/technical/) - How it all works under the hood

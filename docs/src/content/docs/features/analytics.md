@@ -690,6 +690,6 @@ gtag('get', 'G-XXXXXXXXXX', 'consent', (consent) => {
 ---
 
 **Next Steps:**
-- [Learn about GDPR compliance features](/features/gdpr)
-- [Explore SEO enhancements](/features/seo)
-- [Configure custom settings](/guides/configuration)
+- [Learn about GDPR compliance features](/astro-starlight-docs-template/features/gdpr)
+- [Explore SEO enhancements](/astro-starlight-docs-template/features/seo)
+- [Configure custom settings](/astro-starlight-docs-template/guides/configuration)

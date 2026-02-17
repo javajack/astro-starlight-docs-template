@@ -646,6 +646,6 @@ function showGranularConsentBanner() {
 ---
 
 **Next Steps:**
-- [Review troubleshooting guide](/guides/troubleshooting)
-- [Explore technical implementation](/implementation/technical)
-- [Learn about configuration options](/guides/configuration)
+- [Review troubleshooting guide](/astro-starlight-docs-template/guides/troubleshooting)
+- [Explore technical implementation](/astro-starlight-docs-template/implementation/technical)
+- [Learn about configuration options](/astro-starlight-docs-template/guides/configuration)

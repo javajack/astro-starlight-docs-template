@@ -399,7 +399,7 @@ Authenticated as: John Doe
 
 **Notes:**
 - Replace `your-api-key-here` with your actual API key
-- API keys can be obtained from the [dashboard](/dashboard)
+- API keys can be obtained from the [dashboard](/astro-starlight-docs-template/dashboard)
 - Keep API keys secret and never commit to version control
 ```
 
@@ -673,15 +673,15 @@ Node.js and stuff
 
 Now that you've installed the SDK, you might want to:
 
-- **[Configure authentication](/guides/authentication)** - Set up API keys
-- **[Make your first request](/guides/quickstart)** - Try the API
-- **[Explore API reference](/api/reference)** - See all endpoints
-- **[Troubleshooting](/guides/troubleshooting)** - Fix common issues
+- **[Configure authentication](/astro-starlight-docs-template/guides/authentication)** - Set up API keys
+- **[Make your first request](/astro-starlight-docs-template/guides/quickstart)** - Try the API
+- **[Explore API reference](/astro-starlight-docs-template/api/reference)** - See all endpoints
+- **[Troubleshooting](/astro-starlight-docs-template/guides/troubleshooting)** - Fix common issues
 
 **Related guides:**
-- [Environment variables](/guides/environment)
-- [Error handling](/guides/errors)
-- [Best practices](/guides/best-practices)
+- [Environment variables](/astro-starlight-docs-template/guides/environment)
+- [Error handling](/astro-starlight-docs-template/guides/errors)
+- [Best practices](/astro-starlight-docs-template/guides/best-practices)
 ```
 
 ## Advanced Configuration
@@ -798,6 +798,6 @@ test('Structured data valid', async () => {
 ---
 
 **Next Steps:**
-- [Explore technical implementation](/implementation/technical)
-- [Learn about enhancements](/implementation/enhancements)
-- [Configure LLM settings](/guides/configuration)
+- [Explore technical implementation](/astro-starlight-docs-template/implementation/technical)
+- [Learn about enhancements](/astro-starlight-docs-template/implementation/enhancements)
+- [Configure LLM settings](/astro-starlight-docs-template/guides/configuration)

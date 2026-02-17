@@ -640,9 +640,9 @@ Link related pages:
 
 ```mdx
 For more information, see:
-- [Configuration Guide](/guides/configuration)
-- [Troubleshooting](/guides/troubleshooting)
-- [Advanced Features](/features/overview)
+- [Configuration Guide](/astro-starlight-docs-template/guides/configuration)
+- [Troubleshooting](/astro-starlight-docs-template/guides/troubleshooting)
+- [Advanced Features](/astro-starlight-docs-template/features/overview)
 ```
 
 **Benefits:**
@@ -799,6 +799,6 @@ view-source:https://docs.example.com/guide
 ---
 
 **Next Steps:**
-- [Learn about LLM optimization](/features/llm)
-- [Configure SEO settings](/guides/configuration)
-- [Explore customization options](/guides/customization)
+- [Learn about LLM optimization](/astro-starlight-docs-template/features/llm)
+- [Configure SEO settings](/astro-starlight-docs-template/guides/configuration)
+- [Explore customization options](/astro-starlight-docs-template/guides/customization)

@@ -769,6 +769,6 @@ if (!GA_ID_REGEX.test(googleAnalyticsId)) {
 ---
 
 **Next Steps:**
-- [Learn about subtle enhancements](/implementation/enhancements)
-- [Understand why we avoid component overrides](/implementation/no-overrides)
-- [Explore configuration options](/guides/configuration)
+- [Learn about subtle enhancements](/astro-starlight-docs-template/implementation/enhancements)
+- [Understand why we avoid component overrides](/astro-starlight-docs-template/implementation/no-overrides)
+- [Explore configuration options](/astro-starlight-docs-template/guides/configuration)

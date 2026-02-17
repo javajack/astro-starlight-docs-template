@@ -272,6 +272,6 @@ The tool checks for Astro and Starlight. Ensure:
 
 ## Next Steps
 
-- [Quick Start Guide](/getting-started/quick-start/) - Run the optimizer
-- [Configuration](/guides/configuration/) - Customize the setup
-- [Features Overview](/features/overview/) - Learn what you get
+- [Quick Start Guide](/astro-starlight-docs-template/getting-started/quick-start/) - Run the optimizer
+- [Configuration](/astro-starlight-docs-template/guides/configuration/) - Customize the setup
+- [Features Overview](/astro-starlight-docs-template/features/overview/) - Learn what you get

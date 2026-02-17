@@ -677,6 +677,6 @@ The optimizer validates configuration at build time:
 ---
 
 **Next Steps:**
-- [Explore customization options](/guides/customization)
-- [Review troubleshooting guide](/guides/troubleshooting)
-- [Learn about technical implementation](/implementation/technical)
+- [Explore customization options](/astro-starlight-docs-template/guides/customization)
+- [Review troubleshooting guide](/astro-starlight-docs-template/guides/troubleshooting)
+- [Learn about technical implementation](/astro-starlight-docs-template/implementation/technical)
