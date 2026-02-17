@@ -16,14 +16,14 @@ A CLI tool to add Google Analytics, GDPR-compliant cookie consent, SEO optimizat
 No installation needed! Use with `npx`:
 
 ```bash
-npx astro-docs-optimizer init
+npx astro-docs-optimized-template init
 ```
 
 Or install globally:
 
 ```bash
-npm install -g astro-docs-optimizer
-astro-docs-optimizer init
+npm install -g astro-docs-optimized-template
+astro-docs-optimized-template init
 ```
 
 ## 🎯 Usage
@@ -32,7 +32,7 @@ Navigate to your Astro Starlight project and run:
 
 ```bash
 cd my-astro-docs
-npx astro-docs-optimizer init
+npx astro-docs-optimized-template init
 ```
 
 The CLI will prompt you for:
@@ -74,7 +74,7 @@ The CLI will prompt you for:
 ## 🎨 Example
 
 ```bash
-$ npx astro-docs-optimizer init
+$ npx astro-docs-optimized-template init
 
 🚀 Astro Docs Optimizer v1.0.0
 
@@ -148,8 +148,8 @@ MIT © Rakesh Waghela
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/javajack/astro-docs-optimizer)
-- [npm Package](https://www.npmjs.com/package/astro-docs-optimizer)
+- [GitHub Repository](https://github.com/javajack/astro-docs-optimized-template)
+- [npm Package](https://www.npmjs.com/package/astro-docs-optimized-template)
 - [Author on X](https://x.com/webiyo)
 - [Author on LinkedIn](https://www.linkedin.com/in/rakeshwaghela)
 

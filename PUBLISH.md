@@ -9,10 +9,10 @@
 ## Step 1: Create GitHub Repository
 
 ```bash
-# On GitHub, create a new repository: javajack/astro-docs-optimizer
+# On GitHub, create a new repository: javajack/astro-docs-optimized-template
 
 # Add remote
-git remote add origin https://github.com/javajack/astro-docs-optimizer.git
+git remote add origin https://github.com/javajack/astro-docs-optimized-template.git
 
 # Push to GitHub
 git branch -M main
@@ -31,10 +31,10 @@ npm run build
 # Test locally first
 npm link
 cd /path/to/test-project
-npx astro-docs-optimizer init
+npx astro-docs-optimized-template init
 
 # If all works, unlink
-npm unlink -g astro-docs-optimizer
+npm unlink -g astro-docs-optimized-template
 ```
 
 ## Step 3: Publish to npm
@@ -46,7 +46,7 @@ npm publish --dry-run
 # Publish to npm
 npm publish
 
-# For scoped package (if you want @yourusername/astro-docs-optimizer)
+# For scoped package (if you want @yourusername/astro-docs-optimized-template)
 # npm publish --access public
 ```
 
@@ -54,10 +54,10 @@ npm publish
 
 ```bash
 # Check on npm
-# Visit: https://www.npmjs.com/package/astro-docs-optimizer
+# Visit: https://www.npmjs.com/package/astro-docs-optimized-template
 
 # Test installation
-npx astro-docs-optimizer@latest --version
+npx astro-docs-optimized-template@latest --version
 ```
 
 ## Updating After Publishing
@@ -91,7 +91,7 @@ npm publish
 
 - `npm run build` - Build the package
 - `npm publish` - Publish to npm registry
-- `npm unpublish astro-docs-optimizer@version` - Remove a version (within 72h)
+- `npm unpublish astro-docs-optimized-template@version` - Remove a version (within 72h)
 
 ## Testing Before Publishing
 
@@ -99,11 +99,11 @@ npm publish
 # Create test package tarball
 npm pack
 
-# This creates astro-docs-optimizer-1.0.0.tgz
+# This creates astro-docs-optimized-template-1.0.0.tgz
 # Install in test project:
 cd /path/to/test-project
-npm install /path/to/astro-docs-optimizer-1.0.0.tgz
-npx astro-docs-optimizer init
+npm install /path/to/astro-docs-optimized-template-1.0.0.tgz
+npx astro-docs-optimized-template init
 ```
 
 ## Troubleshooting
@@ -115,7 +115,7 @@ npm login
 
 ### "Package name already exists"
 - Choose a different name in package.json
-- Or use scoped package: @yourusername/astro-docs-optimizer
+- Or use scoped package: @yourusername/astro-docs-optimized-template
 
 ### "Version already published"
 ```bash
@@ -127,8 +127,8 @@ npm publish
 ## Post-Publishing Checklist
 
 - [ ] Package appears on npmjs.com
-- [ ] `npx astro-docs-optimizer --version` works
-- [ ] `npx astro-docs-optimizer init` works in test project
+- [ ] `npx astro-docs-optimized-template --version` works
+- [ ] `npx astro-docs-optimized-template init` works in test project
 - [ ] README displays correctly on npm
 - [ ] GitHub repository linked on npm page
 - [ ] Add topics/tags to GitHub repo

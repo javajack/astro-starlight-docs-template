@@ -14,9 +14,9 @@ const command = process.argv[2];
 
 if (!command || command === 'help' || command === '--help' || command === '-h') {
   console.log(`Usage:
-  npx astro-docs-optimizer init     Initialize optimization in current directory
-  npx astro-docs-optimizer --help   Show this help message
-  npx astro-docs-optimizer --version Show version
+  npx astro-docs-optimized-template init     Initialize optimization in current directory
+  npx astro-docs-optimized-template --help   Show this help message
+  npx astro-docs-optimized-template --version Show version
 
 Features added:
   ✓ Google Analytics with Consent Mode v2
@@ -28,7 +28,7 @@ Features added:
 
 Example:
   cd my-astro-docs
-  npx astro-docs-optimizer init
+  npx astro-docs-optimized-template init
 `);
   process.exit(0);
 }
@@ -48,6 +48,6 @@ if (command === 'init') {
     });
 } else {
   console.error(`Unknown command: ${command}`);
-  console.log('Run "npx astro-docs-optimizer --help" for usage information');
+  console.log('Run "npx astro-docs-optimized-template --help" for usage information');
   process.exit(1);
 }

@@ -1,10 +1,10 @@
 {
-  "name": "astro-docs-optimizer",
+  "name": "astro-docs-optimized-template",
   "version": "1.0.0",
   "description": "CLI tool to add Google Analytics, GDPR cookie consent, SEO, and LLM optimization to Astro Starlight documentation sites",
   "main": "dist/index.js",
   "bin": {
-    "astro-docs-optimizer": "./bin/cli.js"
+    "astro-docs-optimized-template": "./bin/cli.js"
   },
   "type": "module",
   "scripts": {
@@ -27,12 +27,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/javajack/astro-docs-optimizer.git"
+    "url": "https://github.com/javajack/astro-docs-optimized-template.git"
   },
   "bugs": {
-    "url": "https://github.com/javajack/astro-docs-optimizer/issues"
+    "url": "https://github.com/javajack/astro-docs-optimized-template/issues"
   },
-  "homepage": "https://github.com/javajack/astro-docs-optimizer#readme",
+  "homepage": "https://github.com/javajack/astro-docs-optimized-template#readme",
   "engines": {
     "node": ">=18.0.0"
   },
