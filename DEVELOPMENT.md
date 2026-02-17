@@ -3,7 +3,7 @@
 ## Project Structure
 
 ```
-astro-docs-optimized-template/
+astro-starlight-docs-template/
 ├── bin/
 │   └── cli.js              # CLI entry point
 ├── src/
@@ -44,10 +44,10 @@ npm link
 cd /path/to/test-astro-project
 
 # Run the CLI
-astro-docs-optimized-template init
+astro-starlight-docs-template init
 
 # When done testing
-npm unlink -g astro-docs-optimized-template
+npm unlink -g astro-starlight-docs-template
 ```
 
 ### 4. Test with npx (More Realistic)
@@ -56,10 +56,10 @@ npm unlink -g astro-docs-optimized-template
 # In the optimizer directory
 npm pack
 
-# This creates: astro-docs-optimized-template-1.0.0.tgz
+# This creates: astro-starlight-docs-template-1.0.0.tgz
 
 # In test project
-npx /absolute/path/to/astro-docs-optimized-template-1.0.0.tgz init
+npx /absolute/path/to/astro-starlight-docs-template-1.0.0.tgz init
 ```
 
 ## Making Changes

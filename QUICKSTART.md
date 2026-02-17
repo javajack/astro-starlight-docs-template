@@ -13,7 +13,7 @@ A complete npm CLI package that automates Astro Starlight documentation optimiza
 ## Project Location
 
 ```
-/home/rakesh/work/astro-docs-optimized-template/
+/home/rakesh/work/astro-starlight-docs-template/
 ```
 
 ## Test It Locally (Before Publishing)
@@ -21,7 +21,7 @@ A complete npm CLI package that automates Astro Starlight documentation optimiza
 ### Option 1: Using npm link
 
 ```bash
-cd /home/rakesh/work/astro-docs-optimized-template
+cd /home/rakesh/work/astro-starlight-docs-template
 
 # Install dependencies first
 npm install
@@ -34,17 +34,17 @@ npm link
 
 # Test in your docs project
 cd /home/rakesh/work/broking/kyc-docs-site
-astro-docs-optimized-template init
+astro-starlight-docs-template init
 
 # Or in xlfill
 cd /home/rakesh/work/xlfill/docs
-astro-docs-optimized-template init
+astro-starlight-docs-template init
 ```
 
 ### Option 2: Using npm pack (More realistic test)
 
 ```bash
-cd /home/rakesh/work/astro-docs-optimized-template
+cd /home/rakesh/work/astro-starlight-docs-template
 
 # Install deps & build
 npm install
@@ -52,24 +52,24 @@ npm run build
 
 # Create tarball
 npm pack
-# Creates: astro-docs-optimized-template-1.0.0.tgz
+# Creates: astro-starlight-docs-template-1.0.0.tgz
 
 # Test it
 cd /home/rakesh/work/broking/kyc-docs-site
-npx /home/rakesh/work/astro-docs-optimized-template/astro-docs-optimized-template-1.0.0.tgz init
+npx /home/rakesh/work/astro-starlight-docs-template/astro-starlight-docs-template-1.0.0.tgz init
 ```
 
 ## Publish to GitHub
 
 ```bash
-cd /home/rakesh/work/astro-docs-optimized-template
+cd /home/rakesh/work/astro-starlight-docs-template
 
 # Create repository on GitHub first:
 # https://github.com/new
-# Name: astro-docs-optimized-template
+# Name: astro-starlight-docs-template
 
 # Add remote and push
-git remote add origin https://github.com/javajack/astro-docs-optimized-template.git
+git remote add origin https://github.com/javajack/astro-starlight-docs-template.git
 git push -u origin main
 ```
 
@@ -88,7 +88,7 @@ npm login
 ### Publish
 
 ```bash
-cd /home/rakesh/work/astro-docs-optimized-template
+cd /home/rakesh/work/astro-starlight-docs-template
 
 # Final check
 npm run build
@@ -100,7 +100,7 @@ npm publish --dry-run
 npm publish
 
 # Success! Package is now live at:
-# https://www.npmjs.com/package/astro-docs-optimized-template
+# https://www.npmjs.com/package/astro-starlight-docs-template
 ```
 
 ### After Publishing
@@ -109,7 +109,7 @@ Anyone can now use it:
 
 ```bash
 # From any Astro project
-npx astro-docs-optimized-template init
+npx astro-starlight-docs-template init
 ```
 
 ## Update After Publishing
@@ -135,7 +135,7 @@ npm publish
 ```bash
 # In ANY Astro Starlight project
 cd my-astro-docs
-npx astro-docs-optimized-template init
+npx astro-starlight-docs-template init
 
 # Interactive prompts will guide you through:
 ? Google Analytics Measurement ID: G-XXXXXXXXXX
@@ -160,8 +160,8 @@ npx astro-docs-optimized-template init
 ## Files Structure
 
 ```
-astro-docs-optimized-template/
-├── bin/cli.js              # Entry point for 'astro-docs-optimized-template' command
+astro-starlight-docs-template/
+├── bin/cli.js              # Entry point for 'astro-starlight-docs-template' command
 ├── src/init.js             # Main logic
 ├── templates/
 │   ├── public/
@@ -212,7 +212,7 @@ npm publish
 # Test locally
 npm link
 cd /test/project
-astro-docs-optimized-template init
+astro-starlight-docs-template init
 
 # If works, publish
 npm version minor  # New feature = minor bump
@@ -223,8 +223,8 @@ npm publish
 ## Support & Issues
 
 After publishing:
-- GitHub Issues: https://github.com/javajack/astro-docs-optimized-template/issues
-- npm page: https://www.npmjs.com/package/astro-docs-optimized-template
+- GitHub Issues: https://github.com/javajack/astro-starlight-docs-template/issues
+- npm page: https://www.npmjs.com/package/astro-starlight-docs-template
 
 ## Next Steps
 
@@ -249,7 +249,7 @@ npm run build
 npm publish
 
 # Check status
-npm info astro-docs-optimized-template
+npm info astro-starlight-docs-template
 ```
 
 ---
