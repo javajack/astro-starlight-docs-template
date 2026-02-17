@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "CLI tool to add Google Analytics, GDPR cookie consent, SEO, and LLM optimization to Astro Starlight documentation sites",
   "main": "dist/index.js",
-  "bin": {
-    "astro-starlight-docs-template": "./bin/cli.js"
-  },
+  "bin": "./bin/cli.js",
   "type": "module",
   "scripts": {
     "build": "node build.js",
