@@ -165,4 +165,90 @@ Based on best practices from:
 
 ---
 
+## 🔧 For Maintainers
+
+### Publishing a New Version
+
+This package uses automated publishing via GitHub Actions with provenance attestations.
+
+**Quick Release (Using Helper Script):**
+
+```bash
+# Patch release (1.0.1 → 1.0.2)
+./release.sh patch
+
+# Minor release (1.0.1 → 1.1.0)
+./release.sh minor
+
+# Major release (1.0.1 → 2.0.0)
+./release.sh major
+```
+
+The script will:
+1. ✅ Bump version in package.json
+2. ✅ Commit the version change
+3. ✅ Push to GitHub
+4. ✅ Provide link to trigger GitHub Actions workflow
+
+**Manual Publishing Steps:**
+
+1. **Bump version:**
+   ```bash
+   npm version patch  # or minor/major
+   ```
+
+2. **Commit and push:**
+   ```bash
+   git push
+   ```
+
+3. **Trigger GitHub Actions:**
+   - Go to: https://github.com/javajack/astro-starlight-docs-template/actions/workflows/publish.yml
+   - Click "Run workflow"
+   - Select `main` branch
+   - Click "Run workflow"
+
+4. **Verify publication:**
+   ```bash
+   npm view astro-starlight-docs-template
+   ```
+
+### Package Features
+
+- ✅ **Automated Publishing** - GitHub Actions workflow
+- ✅ **Provenance Attestations** - Cryptographic supply chain security (SLSA)
+- ✅ **Test Suite** - Automated validation before publish
+- ✅ **Secure Authentication** - Granular access tokens with 2FA bypass
+- ✅ **Version Management** - Semantic versioning
+
+### Development
+
+```bash
+# Install dependencies
+npm install
+
+# Build the package
+npm run build
+
+# Run tests
+npm test
+
+# Test locally with npm link
+npm link
+cd /path/to/test-project
+npx astro-starlight-docs-template init
+```
+
+### Security
+
+- Granular access token stored in GitHub Environment: `npm`
+- Token has write access only to this specific package
+- 2FA bypass enabled only for automation
+- All publishes include provenance attestations
+- Full audit trail via GitHub Actions
+
+For detailed setup instructions, see [GITHUB_PUBLISHING.md](./GITHUB_PUBLISHING.md)
+
+---
+
 **Made with ❤️ for the Astro community**
