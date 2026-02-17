@@ -43,11 +43,10 @@ export default defineConfig({
 						window.__isGDPRRegion = isGDPR;
 					`,
 				},
-				// Google Analytics - Load gtag.js (async, after consent default)
-				// TODO: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID
+				// Google Analytics 4 - Load gtag.js (async, after consent default)
 				{
 					tag: 'script',
-					attrs: { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX' },
+					attrs: { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-G986QLPFZ1' },
 				},
 				{
 					tag: 'script',
@@ -55,12 +54,22 @@ export default defineConfig({
 						window.dataLayer = window.dataLayer || [];
 						function gtag(){dataLayer.push(arguments);}
 						gtag('js', new Date());
-						gtag('config', 'G-XXXXXXXXXX', {
+						gtag('config', 'G-G986QLPFZ1', {
 							'anonymize_ip': true,
 							'cookie_flags': 'SameSite=None;Secure'
 						});
 					`,
 				},
+				// Yandex Webmaster verification
+				{ tag: 'meta', attrs: { name: 'yandex-verification', content: '5281e40eca9463d2' } },
+				// Open Graph image
+				{ tag: 'meta', attrs: { property: 'og:image', content: 'https://javajack.github.io/astro-starlight-docs-template/og-image.svg' } },
+				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
+				{ tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
+				{ tag: 'meta', attrs: { property: 'og:image:type', content: 'image/svg+xml' } },
+				{ tag: 'meta', attrs: { name: 'twitter:image', content: 'https://javajack.github.io/astro-starlight-docs-template/og-image.svg' } },
+				{ tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
+				{ tag: 'meta', attrs: { name: 'twitter:site', content: '@webiyo' } },
 				// SEO meta tags
 				{
 					tag: 'meta',
@@ -76,27 +85,44 @@ export default defineConfig({
 						content: 'Rakesh Waghela',
 					},
 				},
-				{
-					tag: 'meta',
-					attrs: {
-						name: 'twitter:card',
-						content: 'summary_large_image',
-					},
-				},
-				{
-					tag: 'meta',
-					attrs: {
-						name: 'twitter:site',
-						content: '@webiyo',
-					},
-				},
+				// Cloudflare Web Analytics
+				{ tag: 'script', attrs: { defer: true, src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "7ce325bb227e4b42a8406f369ff4e788"}' } },
 				// Cookie Consent Banner
 				{ tag: 'script', attrs: { defer: true, src: '/astro-starlight-docs-template/cookie-consent.js' } },
+				// Structured Data (JSON-LD)
+				{
+					tag: 'script',
+					attrs: { type: 'application/ld+json' },
+					content: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@graph': [
+							{
+								'@type': 'WebSite',
+								name: 'Astro Starlight Docs Template',
+								url: 'https://javajack.github.io/astro-starlight-docs-template/',
+								description: 'Production-ready documentation with Google Analytics, GDPR compliance, SEO, and LLM optimization.',
+								author: { '@id': '#rakesh' },
+							},
+							{
+								'@type': 'Person',
+								'@id': '#rakesh',
+								name: 'Rakesh Waghela',
+								url: 'https://www.linkedin.com/in/rakeshwaghela',
+								sameAs: [
+									'https://x.com/webiyo',
+									'https://www.linkedin.com/in/rakeshwaghela',
+									'https://topmate.io/rakeshwaghela',
+								],
+							},
+						],
+					}),
+				},
 			],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/javajack/astro-starlight-docs-template' },
 				{ icon: 'x.com', label: 'X', href: 'https://x.com/webiyo' },
 				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/rakeshwaghela' },
+				{ icon: 'external', label: 'Book a Consultation', href: 'https://topmate.io/rakeshwaghela' },
 			],
 			sidebar: [
 				{
