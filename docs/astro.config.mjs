@@ -4,14 +4,12 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	// TODO: Replace with your GitHub Pages URL (e.g., 'https://yourusername.github.io')
-	site: 'https://yourusername.github.io',
-	// TODO: Replace with your repository name
-	base: '/your-repo-name',
+	site: 'https://javajack.github.io',
+	base: '/astro-starlight-docs-template',
 	integrations: [
 		starlight({
-			title: 'My Documentation',
-			description: 'Your project description here',
+			title: 'Astro Starlight Docs Template',
+			description: 'Production-ready documentation with Google Analytics, GDPR compliance, SEO, and LLM optimization',
 			components: {
 				Footer: './src/components/Footer.astro',
 			},
@@ -45,10 +43,10 @@ export default defineConfig({
 						window.__isGDPRRegion = isGDPR;
 					`,
 				},
-				// Google Analytics 4 - TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID
+				// Google Analytics 4
 				{
 					tag: 'script',
-					attrs: { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX' },
+					attrs: { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-G986QLPFZ1' },
 				},
 				{
 					tag: 'script',
@@ -56,44 +54,42 @@ export default defineConfig({
 						window.dataLayer = window.dataLayer || [];
 						function gtag(){dataLayer.push(arguments);}
 						gtag('js', new Date());
-						gtag('config', 'G-XXXXXXXXXX', {
+						gtag('config', 'G-G986QLPFZ1', {
 							'anonymize_ip': true,
 							'cookie_flags': 'SameSite=None;Secure'
 						});
 					`,
 				},
-				// Yandex Webmaster - TODO: Replace with your Yandex verification code
-				{ tag: 'meta', attrs: { name: 'yandex-verification', content: 'YOUR_YANDEX_VERIFICATION_CODE' } },
-				// Open Graph image - TODO: Update URLs to match your site
-				{ tag: 'meta', attrs: { property: 'og:image', content: 'https://yourusername.github.io/your-repo-name/og-image.svg' } },
+				// Yandex Webmaster verification
+				{ tag: 'meta', attrs: { name: 'yandex-verification', content: '5281e40eca9463d2' } },
+				// Open Graph image
+				{ tag: 'meta', attrs: { property: 'og:image', content: 'https://javajack.github.io/astro-starlight-docs-template/og-image.svg' } },
 				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
 				{ tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
 				{ tag: 'meta', attrs: { property: 'og:image:type', content: 'image/svg+xml' } },
-				{ tag: 'meta', attrs: { name: 'twitter:image', content: 'https://yourusername.github.io/your-repo-name/og-image.svg' } },
+				{ tag: 'meta', attrs: { name: 'twitter:image', content: 'https://javajack.github.io/astro-starlight-docs-template/og-image.svg' } },
 				{ tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
-				// TODO: Replace with your Twitter handle
-				{ tag: 'meta', attrs: { name: 'twitter:site', content: '@your_twitter_handle' } },
-				// SEO meta tags - TODO: Update keywords for your project
+				{ tag: 'meta', attrs: { name: 'twitter:site', content: '@webiyo' } },
+				// SEO meta tags
 				{
 					tag: 'meta',
 					attrs: {
 						name: 'keywords',
-						content: 'your, project, keywords, here',
+						content: 'astro, starlight, documentation, template, google analytics, gdpr, seo, llm optimization',
 					},
 				},
 				{
 					tag: 'meta',
 					attrs: {
 						name: 'author',
-						// TODO: Replace with your name
-						content: 'Your Name',
+						content: 'Rakesh Waghela',
 					},
 				},
-				// Cloudflare Web Analytics - TODO: Replace with your Cloudflare token
-				{ tag: 'script', attrs: { defer: true, src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "YOUR_CLOUDFLARE_TOKEN"}' } },
-				// Cookie Consent Banner - TODO: Update path to match your base
-				{ tag: 'script', attrs: { defer: true, src: '/your-repo-name/cookie-consent.js' } },
-				// Structured Data (JSON-LD) - TODO: Update with your details
+				// Cloudflare Web Analytics
+				{ tag: 'script', attrs: { defer: true, src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "7ce325bb227e4b42a8406f369ff4e788"}' } },
+				// Cookie Consent Banner
+				{ tag: 'script', attrs: { defer: true, src: '/astro-starlight-docs-template/cookie-consent.js' } },
+				// Structured Data (JSON-LD)
 				{
 					tag: 'script',
 					attrs: { type: 'application/ld+json' },
@@ -102,19 +98,20 @@ export default defineConfig({
 						'@graph': [
 							{
 								'@type': 'WebSite',
-								name: 'My Documentation',
-								url: 'https://yourusername.github.io/your-repo-name/',
-								description: 'Your project description here.',
-								author: { '@id': '#author' },
+								name: 'Astro Starlight Docs Template',
+								url: 'https://javajack.github.io/astro-starlight-docs-template/',
+								description: 'Production-ready documentation with Google Analytics, GDPR compliance, SEO, and LLM optimization.',
+								author: { '@id': '#rakesh' },
 							},
 							{
 								'@type': 'Person',
-								'@id': '#author',
-								name: 'Your Name',
-								url: 'https://www.linkedin.com/in/yourprofile',
+								'@id': '#rakesh',
+								name: 'Rakesh Waghela',
+								url: 'https://www.linkedin.com/in/rakeshwaghela',
 								sameAs: [
-									'https://x.com/your_handle',
-									'https://www.linkedin.com/in/yourprofile',
+									'https://x.com/webiyo',
+									'https://www.linkedin.com/in/rakeshwaghela',
+									'https://topmate.io/rakeshwaghela',
 								],
 							},
 						],
@@ -122,10 +119,10 @@ export default defineConfig({
 				},
 			],
 			social: [
-				// TODO: Replace with your social links
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/yourusername/your-repo-name' },
-				{ icon: 'x.com', label: 'X', href: 'https://x.com/your_handle' },
-				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/yourprofile' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/javajack/astro-starlight-docs-template' },
+				{ icon: 'x.com', label: 'X', href: 'https://x.com/webiyo' },
+				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/rakeshwaghela' },
+				{ icon: 'external', label: 'Book a Consultation', href: 'https://topmate.io/rakeshwaghela' },
 			],
 			sidebar: [
 				{

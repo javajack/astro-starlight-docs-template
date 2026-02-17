@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# TODO: Replace with your sitemap URL
-Sitemap: https://yourusername.github.io/your-repo-name/sitemap-index.xml
+Sitemap: https://javajack.github.io/astro-starlight-docs-template/sitemap-index.xml
