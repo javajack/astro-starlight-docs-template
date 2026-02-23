@@ -1,6 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi';
+import starlightClientMermaid from '@pasqal-io/starlight-client-mermaid';
+import starlightImageZoom from 'starlight-image-zoom';
+import starlightLinksValidator from 'starlight-links-validator';
+import starlightBlog from 'starlight-blog';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,6 +15,39 @@ export default defineConfig({
 		starlight({
 			title: 'Astro Starlight Docs Template',
 			description: 'Production-ready documentation with Google Analytics, GDPR compliance, SEO, and LLM optimization',
+			plugins: [
+				// OpenAPI spec embedding - generates API docs from OpenAPI/Swagger specs
+				starlightOpenAPI([
+					{
+						base: 'api',
+						label: 'API Reference',
+						schema: './schemas/openapi.yaml',
+					},
+				]),
+				// Client-side Mermaid diagram rendering in markdown code blocks
+				starlightClientMermaid(),
+				// Medium-style click-to-zoom on images
+				starlightImageZoom(),
+				// Validate internal links at build time
+				starlightLinksValidator({
+					errorOnRelativeLinks: false,
+				}),
+				// Blog alongside documentation
+				starlightBlog({
+					title: 'Blog',
+					authors: {
+						rakesh: {
+							name: 'Rakesh Waghela',
+							title: 'Tech & KYC Solutions Architect',
+							url: 'https://topmate.io/rakeshwaghela',
+							picture: 'https://github.com/javajack.png',
+						},
+					},
+				}),
+			],
+			customCss: [
+				'./src/styles/custom.css',
+			],
 			components: {
 				Footer: './src/components/Footer.astro',
 			},
@@ -75,7 +113,7 @@ export default defineConfig({
 					tag: 'meta',
 					attrs: {
 						name: 'keywords',
-						content: 'astro, starlight, documentation, template, google analytics, gdpr, seo, llm optimization',
+						content: 'astro, starlight, documentation, template, google analytics, gdpr, seo, llm optimization, openapi, mermaid, blog',
 					},
 				},
 				{
@@ -164,9 +202,11 @@ export default defineConfig({
 					items: [
 						{ label: 'Configuration', slug: 'guides/configuration' },
 						{ label: 'Customization', slug: 'guides/customization' },
+						{ label: 'Component Showcase', slug: 'guides/component-showcase' },
 						{ label: 'Troubleshooting', slug: 'guides/troubleshooting' },
 					],
 				},
+				...openAPISidebarGroups,
 			],
 		}),
 	],

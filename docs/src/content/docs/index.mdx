@@ -11,136 +11,109 @@ hero:
       link: /astro-starlight-docs-template/getting-started/quick-start/
       icon: right-arrow
       variant: primary
+    - text: Component Showcase
+      link: /astro-starlight-docs-template/guides/component-showcase/
+      icon: puzzle
+      variant: secondary
     - text: View on GitHub
       link: https://github.com/javajack/astro-starlight-docs-template
       icon: external
+      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard, Badge, Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
 ## Why This Tool?
 
 Building documentation is easy with Astro and Starlight. But making it **production-ready** requires implementing analytics, GDPR compliance, SEO optimization, and modern AI crawler support. This tool does all of that in one command.
 
 <CardGrid stagger>
-  <Card title="🚀 One Command Setup" icon="rocket">
+  <Card title="One Command Setup" icon="rocket">
     Run `npx astro-starlight-docs-template init` and answer a few questions. Everything is configured automatically.
   </Card>
 
-  <Card title="🔒 GDPR Compliant" icon="approve-check">
+  <Card title="GDPR Compliant" icon="approve-check">
     Regional cookie consent with Google Consent Mode v2. Fully compliant with EU regulations out of the box.
   </Card>
 
-  <Card title="📊 Google Analytics Ready" icon="star">
+  <Card title="Google Analytics Ready" icon="star">
     Pre-configured GA4 with consent mode, IP anonymization, and secure cookie flags. No manual setup needed.
   </Card>
 
-  <Card title="🎯 SEO Optimized" icon="magnifier">
+  <Card title="SEO Optimized" icon="magnifier">
     Open Graph tags, Twitter Cards, and Schema.org structured data ready. Rank higher in search results.
   </Card>
 
-  <Card title="🤖 LLM Friendly" icon="information">
+  <Card title="LLM Friendly" icon="information">
     Generates `llms.txt` for AI crawlers like ChatGPT, Claude, and Gemini. Make your docs AI-discoverable.
   </Card>
 
-  <Card title="⚡ Zero Layout Issues" icon="setting">
-    Script injection method means no component overrides. Your Starlight theme stays pristine.
+  <Card title="Plugin Ecosystem" icon="puzzle">
+    OpenAPI docs, Mermaid diagrams, blog, image zoom, and more — all pre-configured and ready to use.
   </Card>
 </CardGrid>
 
+## Quick Setup
+
+<Steps>
+
+1. **Navigate to your project**
+   ```bash
+   cd my-astro-docs
+   ```
+
+2. **Run the optimizer**
+   <Tabs>
+     <TabItem label="npx" icon="seti:npm">
+       ```bash
+       npx astro-starlight-docs-template init
+       ```
+     </TabItem>
+     <TabItem label="Global">
+       ```bash
+       npm install -g astro-starlight-docs-template
+       astro-starlight-docs-template init
+       ```
+     </TabItem>
+   </Tabs>
+
+3. **Build and deploy**
+   ```bash
+   npm run build
+   ```
+
+</Steps>
+
 ## What You Get
 
-- ✅ **Google Analytics 4** with Consent Mode v2
-- ✅ **GDPR Cookie Consent** banner with Accept/Reject/Settings
-- ✅ **Regional Intelligence** - Different behavior for EU vs non-EU visitors
-- ✅ **SEO Meta Tags** - Open Graph, Twitter Cards, structured data
-- ✅ **LLM Optimization** - AI crawler support via llms.txt
-- ✅ **Custom Footer** with cookie settings and privacy notice
-- ✅ **Provenance Attestations** - Cryptographically verified npm package
-- ✅ **Zero Breaking Changes** - No component overrides that break layouts
+- **Analytics** — Google Analytics 4 with Consent Mode v2
+- **Privacy** — GDPR cookie consent with regional detection
+- **SEO** — Open Graph, Twitter Cards, Schema.org structured data
+- **AI Ready** — LLM optimization via `llms.txt`
+- **API Docs** — OpenAPI/Swagger spec embedding <Badge text="New" variant="tip" />
+- **Diagrams** — Mermaid flowcharts, sequence diagrams, and more <Badge text="New" variant="tip" />
+- **Blog** — Blog section alongside your documentation <Badge text="New" variant="tip" />
+- **Image Zoom** — Click-to-zoom on any image <Badge text="New" variant="tip" />
+- **Custom Footer** — With cookie settings and privacy notice
+- **Zero Breaking Changes** — No component overrides that break layouts
 
-## The Problem This Solves
-
-You've built beautiful documentation with Astro and Starlight. Now you need:
-
-1. **Analytics** to understand your users
-2. **GDPR compliance** to operate legally in the EU
-3. **SEO optimization** to rank in search engines
-4. **AI discoverability** for ChatGPT and other LLM tools
-
-Setting this up manually takes hours and requires:
-- Understanding Google Consent Mode v2
-- Implementing regional detection
-- Creating cookie consent UI
-- Configuring analytics properly
-- Adding meta tags correctly
-- Understanding GDPR requirements
-
-**This tool does it all in under 2 minutes.**
-
-## Built by Practitioners
-
-Created by [Rakesh Waghela](https://topmate.io/rakeshwaghela), a Tech & KYC Solutions Architect who has implemented this exact setup in multiple production documentation sites serving thousands of users across the EU and globally.
-
-This isn't theoretical - it's battle-tested in real-world applications with strict compliance requirements.
-
-## Quick Example
-
-```bash
-# Navigate to your Astro Starlight project
-cd my-docs
-
-# Run the optimizer
-npx astro-starlight-docs-template init
-
-# Answer a few questions
-# ✓ Google Analytics ID: G-XXXXXXXXXX
-# ✓ Site URL: https://example.com
-# ✓ Create custom footer? Yes
-
-# Done! Build and deploy
-npm run build
-```
-
-## What Makes This Different?
+## The Difference
 
 | Feature | Manual Setup | This Tool |
 |---------|--------------|-----------|
 | **Time Required** | 4-6 hours | 2 minutes |
 | **GDPR Compliance** | Research required | Built-in |
 | **Consent Mode v2** | Complex setup | Automatic |
-| **Regional Detection** | Custom code needed | Included |
-| **Layout Breaking** | Common issue | Zero issues |
-| **SEO Tags** | Manual addition | Auto-generated |
-| **LLM Support** | What's that? | Included |
+| **OpenAPI Docs** | Separate tool | Integrated |
+| **Mermaid Diagrams** | Plugin research | Pre-configured |
+| **Blog** | Custom setup | Ready to go |
 | **Maintenance** | Your responsibility | npm updates |
 
-## Real-World Impact
-
-After implementing this optimizer:
-
-- **Analytics Coverage**: 95%+ consent rate in non-GDPR regions, 40-60% in GDPR regions (industry standard)
-- **Search Ranking**: Improved visibility with proper meta tags and structured data
-- **AI Discoverability**: Your docs appear in ChatGPT/Claude/Gemini responses
-- **Legal Compliance**: GDPR Article 7, ePrivacy Directive, ICO Guidelines
-- **User Trust**: Professional cookie notice builds confidence
-
-## Next Steps
+## Explore
 
 <CardGrid>
-  <Card title="Quick Start" icon="rocket">
-    [Get up and running in 2 minutes →](/astro-starlight-docs-template/getting-started/quick-start/)
-  </Card>
-
-  <Card title="Learn About Astro" icon="open-book">
-    [Discover why Astro is perfect for docs →](/astro-starlight-docs-template/why/astro-benefits/)
-  </Card>
-
-  <Card title="Explore Features" icon="puzzle">
-    [Deep dive into what you get →](/astro-starlight-docs-template/features/overview/)
-  </Card>
-
-  <Card title="Technical Details" icon="setting">
-    [Understand the implementation →](/astro-starlight-docs-template/implementation/technical/)
-  </Card>
+  <LinkCard title="Quick Start" description="Get up and running in 2 minutes" href="/astro-starlight-docs-template/getting-started/quick-start/" />
+  <LinkCard title="Component Showcase" description="See all available components and plugins" href="/astro-starlight-docs-template/guides/component-showcase/" />
+  <LinkCard title="Features Overview" description="Deep dive into what you get" href="/astro-starlight-docs-template/features/overview/" />
+  <LinkCard title="Technical Details" description="How it works under the hood" href="/astro-starlight-docs-template/implementation/technical/" />
 </CardGrid>

@@ -1,0 +1,164 @@
+/* ===========================
+   Custom Starlight Theme
+   Professional Indigo/Violet
+   =========================== */
+
+/* --- Smooth scroll --- */
+html {
+	scroll-behavior: smooth;
+}
+
+/* --- Accent Color Scheme (Light) --- */
+:root {
+	--sl-color-accent-low: #e0e1ff;
+	--sl-color-accent: #4f46e5;
+	--sl-color-accent-high: #1e1b4b;
+
+	/* Typography */
+	--sl-font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	--sl-font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Fira Code',
+		Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+
+	/* Content width */
+	--sl-content-width: 55rem;
+}
+
+/* --- Accent Color Scheme (Dark) --- */
+:root[data-theme='dark'] {
+	--sl-color-accent-low: #1e1b4b;
+	--sl-color-accent: #818cf8;
+	--sl-color-accent-high: #e0e7ff;
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+.hero {
+	background: linear-gradient(135deg, var(--sl-color-accent-low) 0%, transparent 60%);
+	border-radius: 1rem;
+	padding: 2rem;
+}
+
+.hero .tagline {
+	font-size: 1.35rem !important;
+	line-height: 1.6;
+	max-width: 42ch;
+}
+
+/* Animated glow on hero action buttons */
+.hero .action {
+	position: relative;
+	transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.hero .action a.primary {
+	box-shadow: 0 0 0 rgba(79, 70, 229, 0);
+	transition: box-shadow 0.4s ease, transform 0.2s ease;
+}
+
+.hero .action a.primary:hover {
+	box-shadow: 0 0 20px rgba(79, 70, 229, 0.35);
+	transform: translateY(-1px);
+}
+
+@keyframes subtle-glow {
+	0%, 100% { box-shadow: 0 0 8px rgba(79, 70, 229, 0.15); }
+	50% { box-shadow: 0 0 18px rgba(79, 70, 229, 0.3); }
+}
+
+.hero .action a.primary {
+	animation: subtle-glow 3s ease-in-out infinite;
+}
+
+/* ===========================
+   Card Improvements
+   =========================== */
+.card {
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.75rem;
+}
+
+.card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+	border-image: linear-gradient(135deg, var(--sl-color-accent), var(--sl-color-accent-low)) 1;
+}
+
+:root[data-theme='dark'] .card:hover {
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ===========================
+   Sidebar Polish
+   =========================== */
+nav.sidebar a[aria-current='page'],
+nav.sidebar a[aria-current='true'] {
+	border-radius: 0.375rem;
+	transition: background-color 0.2s ease, color 0.2s ease, border-radius 0.2s ease;
+}
+
+nav.sidebar a {
+	transition: color 0.15s ease, background-color 0.15s ease;
+	border-radius: 0.25rem;
+}
+
+/* ===========================
+   Code Block Styling
+   =========================== */
+pre {
+	border-radius: 0.5rem !important;
+	border: 1px solid var(--sl-color-gray-5);
+}
+
+:root pre {
+	background-color: var(--sl-color-gray-7, #f8f9fa) !important;
+}
+
+:root[data-theme='dark'] pre {
+	background-color: var(--sl-color-gray-6, #1a1a2e) !important;
+	border-color: var(--sl-color-gray-5);
+}
+
+code:not(pre code) {
+	padding: 0.15em 0.35em;
+	border-radius: 0.25rem;
+	font-size: 0.9em;
+}
+
+/* ===========================
+   Content Area
+   =========================== */
+.content-panel {
+	line-height: 1.75;
+}
+
+/* ===========================
+   Links & Misc
+   =========================== */
+.sl-markdown-content a {
+	text-decoration-color: var(--sl-color-accent);
+	text-underline-offset: 0.15em;
+	transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+.sl-markdown-content a:hover {
+	text-decoration-color: currentColor;
+}
+
+/* ===========================
+   Scrollbar (subtle, dark mode)
+   =========================== */
+:root[data-theme='dark'] ::-webkit-scrollbar {
+	width: 8px;
+}
+
+:root[data-theme='dark'] ::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+:root[data-theme='dark'] ::-webkit-scrollbar-thumb {
+	background-color: var(--sl-color-gray-4);
+	border-radius: 4px;
+}

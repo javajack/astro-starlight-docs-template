@@ -1,0 +1,345 @@
+openapi: 3.0.3
+info:
+  title: Documentation Template API
+  version: 1.0.0
+  description: >
+    REST API for the Astro Starlight documentation template. Provides
+    programmatic access to documentation pages, full-text search,
+    page-level analytics, and reader feedback.
+  contact:
+    name: Template Maintainers
+    url: https://github.com/example/astro-starlight-docs-template
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: https://docs.example.com/api
+    description: Production
+  - url: http://localhost:4321/api
+    description: Local development
+
+tags:
+  - name: Documents
+    description: Browse and retrieve documentation pages
+  - name: Search
+    description: Full-text search across all documentation
+  - name: Analytics
+    description: Aggregated page view and engagement metrics
+  - name: Feedback
+    description: Reader feedback on documentation pages
+
+paths:
+  /docs:
+    get:
+      operationId: listDocs
+      summary: List documentation pages
+      description: Returns a paginated list of all published documentation pages.
+      tags: [Documents]
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+            minimum: 1
+          description: Page number
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+            minimum: 1
+            maximum: 100
+          description: Items per page
+        - name: tag
+          in: query
+          schema:
+            type: string
+          description: Filter by tag
+          example: getting-started
+      responses:
+        "200":
+          description: Paginated list of documentation pages
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/DocSummary"
+                  total:
+                    type: integer
+                    example: 42
+                  page:
+                    type: integer
+                    example: 1
+                  limit:
+                    type: integer
+                    example: 20
+
+  /docs/{slug}:
+    get:
+      operationId: getDoc
+      summary: Get a documentation page
+      description: Returns the full content and metadata for a single documentation page.
+      tags: [Documents]
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+          description: URL slug of the documentation page
+          example: guides/getting-started
+      responses:
+        "200":
+          description: Full documentation page
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DocPage"
+        "404":
+          description: Page not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /search:
+    post:
+      operationId: searchDocs
+      summary: Search documentation
+      description: Performs a full-text search across all published documentation pages.
+      tags: [Search]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [query]
+              properties:
+                query:
+                  type: string
+                  minLength: 2
+                  maxLength: 200
+                  example: install starlight
+                limit:
+                  type: integer
+                  default: 10
+                  minimum: 1
+                  maximum: 50
+      responses:
+        "200":
+          description: Search results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/SearchResult"
+                  total:
+                    type: integer
+                    example: 5
+        "400":
+          description: Invalid search query
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /analytics/summary:
+    get:
+      operationId: getAnalyticsSummary
+      summary: Get analytics summary
+      description: Returns aggregated page view and engagement metrics for the documentation site.
+      tags: [Analytics]
+      parameters:
+        - name: period
+          in: query
+          schema:
+            type: string
+            enum: [7d, 30d, 90d]
+            default: 30d
+          description: Time period for the summary
+      responses:
+        "200":
+          description: Analytics summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsSummary"
+
+  /feedback:
+    post:
+      operationId: submitFeedback
+      summary: Submit feedback
+      description: Allows readers to submit feedback on a specific documentation page.
+      tags: [Feedback]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [slug, rating]
+              properties:
+                slug:
+                  type: string
+                  example: guides/getting-started
+                rating:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+                  example: 4
+                comment:
+                  type: string
+                  maxLength: 1000
+                  example: Clear and easy to follow!
+      responses:
+        "201":
+          description: Feedback submitted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                    example: a3bb189e-8bf9-4c99-82d3-3710f0926c04
+                  message:
+                    type: string
+                    example: Thank you for your feedback.
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+components:
+  schemas:
+    DocSummary:
+      type: object
+      properties:
+        slug:
+          type: string
+          example: guides/getting-started
+        title:
+          type: string
+          example: Getting Started
+        description:
+          type: string
+          example: Learn how to set up your documentation site.
+        tags:
+          type: array
+          items:
+            type: string
+          example: [getting-started, setup]
+        updatedAt:
+          type: string
+          format: date-time
+          example: "2026-01-15T10:30:00Z"
+
+    DocPage:
+      allOf:
+        - $ref: "#/components/schemas/DocSummary"
+        - type: object
+          properties:
+            content:
+              type: string
+              description: Page body rendered as HTML
+              example: "<h2>Installation</h2><p>Run the following command...</p>"
+            headings:
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    type: integer
+                    example: 2
+                  text:
+                    type: string
+                    example: Installation
+            prev:
+              type: object
+              nullable: true
+              properties:
+                slug:
+                  type: string
+                title:
+                  type: string
+            next:
+              type: object
+              nullable: true
+              properties:
+                slug:
+                  type: string
+                title:
+                  type: string
+
+    SearchResult:
+      type: object
+      properties:
+        slug:
+          type: string
+          example: guides/getting-started
+        title:
+          type: string
+          example: Getting Started
+        excerpt:
+          type: string
+          example: "...run <mark>npm create astro</mark> to scaffold a new project..."
+        score:
+          type: number
+          format: float
+          example: 0.92
+
+    AnalyticsSummary:
+      type: object
+      properties:
+        period:
+          type: string
+          example: 30d
+        totalPageViews:
+          type: integer
+          example: 12450
+        uniqueVisitors:
+          type: integer
+          example: 3820
+        avgTimeOnPage:
+          type: number
+          format: float
+          description: Average time on page in seconds
+          example: 94.5
+        topPages:
+          type: array
+          items:
+            type: object
+            properties:
+              slug:
+                type: string
+                example: guides/getting-started
+              views:
+                type: integer
+                example: 1580
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          example: 400
+        message:
+          type: string
+          example: Validation failed.
+        details:
+          type: string
+          example: "Field 'query' must be at least 2 characters."
