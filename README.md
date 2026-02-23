@@ -1,17 +1,35 @@
-# 🚀 Astro Docs Optimizer
+# Astro Starlight Docs Template
 
-A CLI tool to add Google Analytics, GDPR-compliant cookie consent, SEO optimization, and LLM optimization to Astro Starlight documentation sites.
+A CLI tool to add Google Analytics, GDPR-compliant cookie consent, SEO optimization, LLM optimization, and a rich plugin ecosystem to Astro Starlight documentation sites.
 
-## ✨ Features
+**[Live Demo](https://javajack.github.io/astro-starlight-docs-template/)** | **[npm Package](https://www.npmjs.com/package/astro-starlight-docs-template)**
+
+## Features
+
+### Core
 
 - **Google Analytics with Consent Mode v2** - Regional scoping for GDPR compliance
 - **GDPR Cookie Consent Banner** - Customizable, with Accept/Reject/Settings options
-- **SEO Optimization** - Open Graph, Twitter Cards, structured data ready
-- **LLM Optimization** - Generate `llms.txt` for AI crawlers
+- **SEO Optimization** - Open Graph, Twitter Cards, Schema.org structured data
+- **LLM Optimization** - Generate `llms.txt` for AI crawlers (ChatGPT, Claude, Gemini)
 - **Regional Intelligence** - Different behavior for GDPR vs non-GDPR regions
 - **Zero Component Overrides** - Script injection method prevents layout issues
 
-## 📦 Installation
+### Plugins (New in v1.1.0)
+
+- **OpenAPI/Swagger Docs** - Auto-generate API reference pages from OpenAPI 3.x specs
+- **Mermaid Diagrams** - Flowcharts, sequence diagrams, ERDs directly in markdown
+- **Blog** - Blog section alongside docs with posts, tags, authors, and RSS feed
+- **Image Zoom** - Medium-style click-to-zoom on documentation images
+- **Link Validation** - Catch broken internal links at build time
+- **Custom Theme** - Professional indigo/violet accent with hero animations and card effects
+
+### Built-in Component Showcase
+
+All Starlight components pre-configured and demonstrated:
+Tabs, Cards, CardGrid, LinkCards, Steps, FileTree, Badges, Asides (Note/Tip/Caution/Danger), and syntax-highlighted code blocks with filenames, line highlighting, and diff support.
+
+## Installation
 
 No installation needed! Use with `npx`:
 
@@ -26,7 +44,7 @@ npm install -g astro-starlight-docs-template
 astro-starlight-docs-template init
 ```
 
-## 🎯 Usage
+## Usage
 
 Navigate to your Astro Starlight project and run:
 
@@ -42,7 +60,7 @@ The CLI will prompt you for:
 - Analytics preferences (Cloudflare, etc.)
 - Component customization options
 
-## 🛠️ What It Does
+## What It Does
 
 ### 1. Cookie Consent Banner
 - Creates `public/cookie-consent.js`
@@ -66,21 +84,44 @@ The CLI will prompt you for:
 - Generates `public/llms.txt`
 - Prepares site for AI crawler indexing
 
-## 📋 Requirements
+### 5. Plugin Ecosystem (New in v1.1.0)
+
+The docs template includes these pre-configured plugins:
+
+| Plugin | Purpose |
+|--------|---------|
+| `starlight-openapi` | API docs from OpenAPI/Swagger specs |
+| `@pasqal-io/starlight-client-mermaid` | Mermaid diagrams in markdown |
+| `starlight-image-zoom` | Click-to-zoom on images |
+| `starlight-links-validator` | Build-time broken link detection |
+| `starlight-blog` | Blog with posts, tags, RSS |
+| `starlight-package-managers` | npm/yarn/pnpm/bun install tabs |
+
+### 6. Custom Theme
+
+- Indigo/violet accent color scheme (light + dark mode)
+- Hero section with gradient background and animated CTA buttons
+- Card hover animations with gradient borders
+- Polished sidebar transitions
+- Wider content area (55rem)
+- Improved code block styling
+- Modern typography (Inter + JetBrains Mono system font stacks)
+
+## Requirements
 
 - Node.js >= 18.0.0
 - Astro project with @astrojs/starlight
 
-## 🎨 Example
+## Example
 
 ```bash
 $ npx astro-starlight-docs-template init
 
-🚀 Astro Docs Optimizer v1.0.0
+Astro Docs Optimizer v1.1.0
 
-🔍 Checking if this is an Astro Starlight project...
+Checking if this is an Astro Starlight project...
 
-✓ Astro project detected
+Astro project detected
 
 ? Google Analytics Measurement ID: G-XXXXXXXXXX
 ? Site URL: https://javajack.github.io
@@ -91,32 +132,28 @@ $ npx astro-starlight-docs-template init
 ? Create custom footer? Yes
 ? Add LLM optimization? Yes
 
-📦 Installing optimizations...
+Installing optimizations...
 
-✓ Cookie consent script created: public/cookie-consent.js
-✓ astro.config.mjs updated with analytics and consent mode
-✓ Footer component created: src/components/overrides/Footer.astro
-✓ Created public/llms.txt
-✓ Documentation created: ASTRO_DOCS_OPTIMIZER.md
+Cookie consent script created: public/cookie-consent.js
+astro.config.mjs updated with analytics and consent mode
+Footer component created: src/components/overrides/Footer.astro
+Created public/llms.txt
+Documentation created: ASTRO_DOCS_OPTIMIZER.md
 
-✅ Optimization complete!
-
-Next steps:
-  1. Review the changes in astro.config.mjs
-  2. Update your Google Analytics ID if needed
-  3. Build and deploy: npm run build
-  4. Check ASTRO_DOCS_OPTIMIZER.md for details
+Optimization complete!
 ```
 
-## 📖 Documentation
+## Documentation
 
-After running the optimizer, check `ASTRO_DOCS_OPTIMIZER.md` for:
-- Configuration summary
-- Files created/modified
-- Implementation details
-- Next steps
+Full documentation available at: **https://javajack.github.io/astro-starlight-docs-template/**
 
-## 🌍 Regional Behavior
+Key pages:
+- [Quick Start](https://javajack.github.io/astro-starlight-docs-template/getting-started/quick-start/)
+- [Component Showcase](https://javajack.github.io/astro-starlight-docs-template/guides/component-showcase/)
+- [API Reference](https://javajack.github.io/astro-starlight-docs-template/api/) (auto-generated from OpenAPI)
+- [Features Overview](https://javajack.github.io/astro-starlight-docs-template/features/overview/)
+
+## Regional Behavior
 
 ### GDPR Regions (EU/EEA/UK)
 - Cookie banner shown on first visit
@@ -129,43 +166,38 @@ After running the optimizer, check `ASTRO_DOCS_OPTIMIZER.md` for:
 - Better measurement quality
 - Footer link available to opt-out
 
-## 🔒 Privacy & Compliance
+## Privacy & Compliance
 
-- ✅ GDPR Article 7 compliant
-- ✅ ePrivacy Directive compliant
-- ✅ ICO Guidelines compliant
-- ✅ Google Consent Mode v2
-- ✅ IP anonymization
-- ✅ Secure cookie flags
+- GDPR Article 7 compliant
+- ePrivacy Directive compliant
+- ICO Guidelines compliant
+- Google Consent Mode v2
+- IP anonymization
+- Secure cookie flags
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Please open an issue or PR.
 
-## 📄 License
+## License
 
-MIT © Rakesh Waghela
+MIT (c) Rakesh Waghela
 
-## 🔗 Links
+## Links
 
 - [GitHub Repository](https://github.com/javajack/astro-starlight-docs-template)
 - [npm Package](https://www.npmjs.com/package/astro-starlight-docs-template)
+- [Live Documentation](https://javajack.github.io/astro-starlight-docs-template/)
 - [Author on X](https://x.com/webiyo)
 - [Author on LinkedIn](https://www.linkedin.com/in/rakeshwaghela)
 
-## 🙏 Credits
+## Credits
 
 Built by [Rakesh Waghela](https://topmate.io/rakeshwaghela) - Tech & KYC Solutions Architect
 
-Based on best practices from:
-- Google Analytics Developer Guide
-- GDPR Official Text
-- Astro/Starlight Documentation
-- Real-world implementation in production documentation sites
-
 ---
 
-## 🔧 For Maintainers
+## For Maintainers
 
 ### Publishing a New Version
 
@@ -174,21 +206,21 @@ This package uses automated publishing via GitHub Actions with provenance attest
 **Quick Release (Using Helper Script):**
 
 ```bash
-# Patch release (1.0.1 → 1.0.2)
+# Patch release (1.1.0 -> 1.1.1)
 ./release.sh patch
 
-# Minor release (1.0.1 → 1.1.0)
+# Minor release (1.1.0 -> 1.2.0)
 ./release.sh minor
 
-# Major release (1.0.1 → 2.0.0)
+# Major release (1.1.0 -> 2.0.0)
 ./release.sh major
 ```
 
 The script will:
-1. ✅ Bump version in package.json
-2. ✅ Commit the version change
-3. ✅ Push to GitHub
-4. ✅ Provide link to trigger GitHub Actions workflow
+1. Bump version in package.json
+2. Commit the version change
+3. Push to GitHub
+4. Provide link to trigger GitHub Actions workflow
 
 **Manual Publishing Steps:**
 
@@ -212,14 +244,6 @@ The script will:
    ```bash
    npm view astro-starlight-docs-template
    ```
-
-### Package Features
-
-- ✅ **Automated Publishing** - GitHub Actions workflow
-- ✅ **Provenance Attestations** - Cryptographic supply chain security (SLSA)
-- ✅ **Test Suite** - Automated validation before publish
-- ✅ **Secure Authentication** - Granular access tokens with 2FA bypass
-- ✅ **Version Management** - Semantic versioning
 
 ### Development
 
@@ -248,7 +272,3 @@ npx astro-starlight-docs-template init
 - Full audit trail via GitHub Actions
 
 For detailed setup instructions, see [GITHUB_PUBLISHING.md](./GITHUB_PUBLISHING.md)
-
----
-
-**Made with ❤️ for the Astro community**
